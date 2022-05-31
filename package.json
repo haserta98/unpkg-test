@@ -1,5 +1,5 @@
 {
-  "name": "test-unpkg",
+  "name": "unpkg-test",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.umd.min.js",
@@ -22,8 +22,7 @@
     "build:minjs:umd": "terser dist/index.umd.js --compress --mangle > dist/index.umd.min.js",
     "build:minjs:esm": "terser dist/index.esm.js --compress --mangle > dist/index.esm.min.js",
     "build:minjs": "npm run build:minjs:esm -s && npm run build:minjs:umd -s",
-    "build": "npm run build:js -s && npm run build:minjs -s && npm run build:types -s",
-    "prepublishOnly": "npm run lint -s && npm test -s && npm run build"
+    "build": "npm run build:js -s && npm run build:minjs -s && npm run build:types -s"
   },
   "files": [
     "src",
